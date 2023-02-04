@@ -7,7 +7,7 @@ Il est proposé d'utiliser la concaténation de quatre champs, soit, `<no_missio
 ```
 ## Le champ `no_mission`
 
-Un identifiant unique (domaine d'application à l'échelle national) de missions.
+Un identifiant unique (portée à l'échelle national) de missions.
 
 ### example de l'Institut Maurice Lamontagne du MPO
 Dans le contexte MPO, cette identifiant est fournis pas l'institut quand la proposition de mission à été accepté/confirmé. Elle corréspond au numéro d'autorisation de la mission.
@@ -30,7 +30,7 @@ le champ `no_mission`:
 
 
 ## Le champ `id_appareil`
-Un identifiant unique (domaine d'application à l'échelle de la mission) de l'appareil d'acquisition d'imagerie.
+Un identifiant unique (portée à l'échelle de la mission) de l'appareil d'acquisition d'imagerie.
 
 Cela peux être:
 -  caméra d'un miscroscope
@@ -54,7 +54,7 @@ Le champ `id_appareil`:
 - ex. `id_appareil = C2` (la meme Cannon #2, dans un autre mission)
 
 ## Le champ `id_activité`
-Un identifiant unique (domaine d'application à l'échelle de la mission) de l'activité (trait de chalut, CTD, etc).
+Un identifiant unique (portée à l'échelle de la mission) de l'activité (trait de chalut, CTD, etc).
 Elle est normalement (mais pas obligatoirement) séquentiel: commençant par `001`, et est incrémenté pour chaque activité.
 Un deuxieme trait de chalut à la même station constitut une nouvelle activité, même ci cela n'est q'une reprise d'un mauvais trait.
 
@@ -73,7 +73,7 @@ Le champ `id_activité`:
 **Quoi faire avec plusieurs engines/filets pour le meme trait?**
 
 ## Le champ `id_photo`
-Un identifiant unique (domaine d'application à l'échelle l'appareil dans une mission) du fichier d'imagerie (photos ou vidéo).
+Un identifiant unique (portée à l'échelle l'appareil dans une mission) du fichier d'imagerie (photos ou vidéo).
 
 Le champ `id_photo`:
  - charactères numériques
