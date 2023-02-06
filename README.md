@@ -7,7 +7,7 @@ Il est proposé d'utiliser la concaténation de quatre champs, soit, `<no_missio
 ```
 ## Le champ `no_mission`
 
-Un identifiant unique (domaine d'application à l'échelle national) de missions.
+Un identifiant unique (portée à l'échelle national) de missions.
 
 ### exemple de l'Institut Maurice Lamontagne du MPO
 Dans le contexte MPO, cette identifiant est fournis par l'institut quand la proposition de mission a été accepté/confirmé. Elle correspond au numéro d'autorisation de la mission.
@@ -29,7 +29,7 @@ le champ `no_mission`:
 - ex. `no_mission = 2022-IML-034` (Le broutage et la dynamique des forêts de laminaires d'une côte à l'autre, du  1 juin 2022 au 31 mars 2023)
 
 ## Le champ `id_appareil`
-Un identifiant unique (domaine d'application à l'échelle de la mission) de l'appareil d'acquisition d'imagerie.
+Un identifiant unique (portée à l'échelle de la mission) de l'appareil d'acquisition d'imagerie.
 
 Cela peut être:
 -  caméra d'un microscope
@@ -53,7 +53,7 @@ Le champ `id_appareil`:
 - ex. `id_appareil = C2` (la même Cannon #2, dans un autre mission)
 
 ## Le champ `id_activité`
-Un identifiant unique (domaine d'application à l'échelle de la mission) de l'activité (trait de chalut, CTD, etc.).
+Un identifiant unique (portée à l'échelle de la mission) de l'activité (trait de chalut, CTD, etc).
 Elle est normalement (mais pas obligatoirement) séquentiel: commençant par `001`, et est incrémenté pour chaque activité.
 Un deuxième trait de chalut à la même station constitue une nouvelle activité, même si cela n'est qu’une reprise d'un mauvais trait.
 
@@ -72,7 +72,7 @@ Le champ `id_activité`:
 **Quoi faire avec plusieurs engines/filets pour le même trait?**
 
 ## Le champ `id_photo`
-Un identifiant unique (domaine d'application à l'échelle l'appareil dans une mission) du fichier d'imagerie (photos ou vidéo).
+Un identifiant unique (portée à l'échelle l'appareil dans une mission) du fichier d'imagerie (photos ou vidéo).
 
 Le champ `id_photo`:
  - charactères numériques
