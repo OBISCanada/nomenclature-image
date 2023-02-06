@@ -9,8 +9,8 @@ Il est proposé d'utiliser la concaténation de quatre champs, soit, `<no_missio
 
 Un identifiant unique (domaine d'application à l'échelle national) de missions.
 
-### example de l'Institut Maurice Lamontagne du MPO
-Dans le contexte MPO, cette identifiant est fournis pas l'institut quand la proposition de mission à été accepté/confirmé. Elle corréspond au numéro d'autorisation de la mission.
+### exemple de l'Institut Maurice Lamontagne du MPO
+Dans le contexte MPO, cette identifiant est fournis par l'institut quand la proposition de mission a été accepté/confirmé. Elle correspond au numéro d'autorisation de la mission.
 
 Elle est généralement composé de trois sous-parties (`<ID_ANNÉE>`,`<ID_INSTITUT>`, `<ID_MISSION>` ) séparées par des tirets `-`.
 
@@ -19,21 +19,20 @@ le champ `no_mission`:
 - contient une sous partie `<ID_ANNÉE>`
   - composée de quatre charactères numériques
 - contient sous partie `<ID_INSTITUT>`
-  - composée de trois charactères alpha-numériques
+  - composée de trois charactères alphanumériques
   - a toujours la valeur `IML`
 - contient sous partie `<ID_MISSIONS>`
   - est composé de trois charactères numériques
   - utilise `0` comme charactère de remplissage
-- est fournit par l'IML
+- est fourni par l'IML
 - a toujours 12 charactères
 - ex. `no_mission = 2022-IML-034` (Le broutage et la dynamique des forêts de laminaires d'une côte à l'autre, du  1 juin 2022 au 31 mars 2023)
-
 
 ## Le champ `id_appareil`
 Un identifiant unique (domaine d'application à l'échelle de la mission) de l'appareil d'acquisition d'imagerie.
 
-Cela peux être:
--  caméra d'un miscroscope
+Cela peut être:
+-  caméra d'un microscope
 -  caméra a main libre
 -  téléphone mobile
 -  caméra vidéo sous-marine
@@ -45,18 +44,18 @@ Il est bonne pratique d'affixer une étiquette avec cette identifiant sur l'appa
 
 Le champ `id_appareil`:
 - a toujours 2 charactères
-- est composé de charactères alpha-numérique
+- est composé de charactères alphanumérique
 - est fournis par l'équipe
 - ex. `id_appareil = C1` (la Cannon #1)
 - ex. `id_appareil = C2` (la Cannon #2)
 - ex. `id_appareil = OL` (la Olympus)
-- ex. `id_appareil = CN` (la meme Cannon #1, dans un autre mission)
-- ex. `id_appareil = C2` (la meme Cannon #2, dans un autre mission)
+- ex. `id_appareil = CN` (la même Cannon #1, dans un autre mission)
+- ex. `id_appareil = C2` (la même Cannon #2, dans un autre mission)
 
 ## Le champ `id_activité`
-Un identifiant unique (domaine d'application à l'échelle de la mission) de l'activité (trait de chalut, CTD, etc).
+Un identifiant unique (domaine d'application à l'échelle de la mission) de l'activité (trait de chalut, CTD, etc.).
 Elle est normalement (mais pas obligatoirement) séquentiel: commençant par `001`, et est incrémenté pour chaque activité.
-Un deuxieme trait de chalut à la même station constitut une nouvelle activité, même ci cela n'est q'une reprise d'un mauvais trait.
+Un deuxième trait de chalut à la même station constitue une nouvelle activité, même si cela n'est qu’une reprise d'un mauvais trait.
 
 Le champ `id_activité`:
  - a toujours 3 charactères
@@ -66,11 +65,11 @@ Le champ `id_activité`:
  - cas-spécial de `000` réservé pour médias n'ayant pas de contexte d'activité
  - ex. `id_activité = 004` (drague a la station 16)
  - ex. `id_activité = 005` (reprise de drague a la station 16)
- - ex. `id_activité = 006` (CTD a la station 16)
- - ex. `id_activité = 000` (un gros réquin lors de transit)
+ - ex. `id_activité = 006` (CTD à la station 16)
+ - ex. `id_activité = 000` (un gros requin lors de transit)
  - ex. `id_activité = 000` (vol de sandwich par un goéland)
 
-**Quoi faire avec plusieurs engines/filets pour le meme trait?**
+**Quoi faire avec plusieurs engines/filets pour le même trait?**
 
 ## Le champ `id_photo`
 Un identifiant unique (domaine d'application à l'échelle l'appareil dans une mission) du fichier d'imagerie (photos ou vidéo).
@@ -99,7 +98,7 @@ code_photo = sprintf("%s_%03d_%s_%04d", no_mission, id_activite, id_appareil, id
 ``` R
 "2022-IML-034_004_C2_0007"
 ```
-## example en python
+## exemple en python
 ``` Python
 no_mission = "2022-IML-034"
 id_activite = 4
