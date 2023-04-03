@@ -1,4 +1,4 @@
-# Identifiants d'imagerie
+# Identifiants d'imagerie de biodiversité
 Codes d'identification pour les fichiers d'imagerie (images et vidéos).
 Il est proposé d'utiliser la concaténation de quatre champs, soit, `<no_mission>`, `<id_activite>`, `<id_appareil>` et `<id_photo>`, séparés par un trait de soulignage (underscore): `_`.
 
