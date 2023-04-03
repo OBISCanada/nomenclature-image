@@ -43,14 +43,14 @@ Une description (incluant son identifiant `id_appareil`) de cette appareil de me
 Il est bonne pratique d'affixer une étiquette avec cette identifiant sur l'appareil.
 
 Le champ `id_appareil`:
-- a toujours 2 charactères
+- a toujours 3 charactères
 - est composé de charactères alphanumérique
 - est fournis par l'équipe
-- ex. `id_appareil = C1` (la Cannon #1)
-- ex. `id_appareil = C2` (la Cannon #2)
-- ex. `id_appareil = OL` (la Olympus)
-- ex. `id_appareil = CN` (la même Cannon #1, dans un autre mission)
-- ex. `id_appareil = C2` (la même Cannon #2, dans un autre mission)
+- ex. `id_appareil = C01` (la Cannon #1)
+- ex. `id_appareil = C02` (la Cannon #2)
+- ex. `id_appareil = OL0` (la Olympus)
+- ex. `id_appareil = Can` (la même Cannon #1, dans un autre mission)
+- ex. `id_appareil = C02` (la même Cannon #2, dans un autre mission)
 
 ## Le champ `id_activité`
 Un identifiant unique (portée à l'échelle de la mission) de l'activité (trait de chalut, CTD, etc).
