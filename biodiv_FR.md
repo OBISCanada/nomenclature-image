@@ -57,17 +57,17 @@ Un identifiant unique (portée à l'échelle de la mission) de l'activité (trai
 Elle est normalement (mais pas obligatoirement) séquentiel: commençant par `001`, et est incrémenté pour chaque activité.
 Un deuxième trait de chalut à la même station constitue une nouvelle activité, même si cela n'est qu’une reprise d'un mauvais trait.
 
+
 Le champ `id_activité`:
- - a toujours 3 charactères
- - charactères numériques
+ - zone de peche `16E`
  - utilise `0` comme charactère de remplissage
  - commence avec la valeur `001`
  - cas-spécial de `000` réservé pour médias n'ayant pas de contexte d'activité
- - ex. `id_activité = 004` (drague a la station 16)
- - ex. `id_activité = 005` (reprise de drague a la station 16)
- - ex. `id_activité = 006` (CTD à la station 16)
- - ex. `id_activité = 000` (un gros requin lors de transit)
- - ex. `id_activité = 000` (vol de sandwich par un goéland)
+ - ex. `id_activité = 16E_004` (drague a la station 16)
+ - ex. `id_activité = 16E_005` (reprise de drague a la station 16)
+ - ex. `id_activité = 16E_006` (CTD à la station 16)
+ - ex. `id_activité = 16E_000` (un gros requin lors de transit)
+ - ex. `id_activité = 16E_000` (vol de sandwich par un goéland)
 
 **Quoi faire avec plusieurs engines/filets pour le même trait?**
 
