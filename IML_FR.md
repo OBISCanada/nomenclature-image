@@ -46,7 +46,7 @@ Il est entendu qu’un minimum de contexte (autre que seul le `eventId`) soit di
 Il serait bien d'éviter l'usage du trait de soulignment, car son usage est réserver pour l'`occurenceId` (voir section occurrenceId ci bas).
 
 
-## groupe `MISSION/PROJET`
+## le groupe `MISSION/PROJET`
 Le premier groupe hiérarchique représente  la mission ou le projet.
 Pour les missions issue de l'Institute Maurice Lamontagne, nous utilisons le *numéro de notification de recherche*.
 Numéro de notification de recherche, (ex. `IML-2023-001`) Parfois appelé "numéros de mission" ou "code de mission", ce numéro est fourni par la direction régionale des sciences (DRS). 
