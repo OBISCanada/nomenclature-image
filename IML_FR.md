@@ -33,6 +33,23 @@ Les données relationnels sont donc disposé, en quelque sorte, avec un format t
 
 Pour plus amples informations, voir [le manuel d’OBIS](https://manual.obis.org/).
 
+## Champs à usaege spéciele / Champs à éviter
+Nous évitons l'usage de certain champs.
+
+### Le chamnp `taxonID`
+Il faut éviter d'utiliser des codes internes (`STRAP`, `COD_ESP_GEN`, `RVAN`), donc le `aphia_id` serait un bon candidat possible, par contre il est déja disponible sous la colonne `scientificNameID`. En plus, OBIS va mettre a jour la valeur `scientificNameID` selon les services WoRMS (mais ne va pas changer `taxonID`. Donc il vaux mieux éviter `taxonID` pour ne pas créer de confusion.
+
+### Les chamnps `decimalLatitude`, `decimalLongitude`, `coordinateUncertaintyInMeters` et `footprintWKT` pour un trait de drague.
+Nous avons l'habitude de noter la position et profondeur du début et fin de trait. Donc comment faire pour pouvoir
+
+Les positions du début et fin de trait sont combinées ensemble pour créer une seul `decimalLatitude` et `decimalLongitude` qui représent la position moyenne (entre début et fin) du trait. Il faut donc calculer cette valeur ainsi qu'une marge d'érreur `coordinateUncertaintyInMeters` suffisament grande pour inclure les coordonées du début et fin.
+
+La position du début et fin de trait devrait être présente dans le champ `footprintWKT`. L'ordre des coordonées sont importants, le premier coordonné corréspond au début du trait, et de dernier corréspond a la fin de trait. Ils est possible d'inclure des profondeurs en utilisant la coordonée d'élévation:
+
+``` wkt
+LINESTRING (-68.174436 48.647513 -20.2, -68.166668 48.649483 -20.5)
+```
+
 # eventID
 Composés de plusieurs groupes hiérarchiques séparés avec des traits d'unions: `-`.
 ``` 
