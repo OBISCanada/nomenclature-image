@@ -75,20 +75,19 @@ Généralement une courte série de charactères utilisées pour donner un conte
 exemples:
  - `16E` pour désigner que l'activité provient de la zone 16E (pétoncle Minganie) 
  - `16F` pour désigner que l'activité provient de la zone 16F (pétoncle Minganie)
- - `16F` [facultatif] pour désigner que l'activité provient de la zone 16F (pétoncle Îles-de-la-Madeleine)
+ - `20` [facultatif] pour désigner que l'activité provient de la zone 20 (pétoncle Îles-de-la-Madeleine)
  - `FOR` [facultatif] pour désigner que l'activité provient du secteur Forestville (buccin)
 
 Ce contexte est obligatoire pour du relevé de pétoncle en Minganie, car il a chevauchement des numéros de stations dans la même mission (i.e., il existe la station `E4` dans la zone 16E et la station `E4` dans la zone 16F, il faut préciser la zone ainsi que le nom de la station pour éviter l’ambiguïté).
 
 ## le groupe `STATION`
 
-
-Numéro/nom de la station pour l'activité a eu lieu.
+Numéro/nom de la station pour où l'activité à eu lieu.
 exemples:
 
- - `E02` pour désigner que la station E02 (pétoncle Minganie)
- - `MTI-03` pour désigner que la station MTI-03 (mission mer de Beaufort)
- - `01` pour désigner que la station 1 (buccin Basse-Côte-Nord)
+ - `E02` pour désigner la station E02 (pétoncle Minganie)
+ - `MTI-03` pour désigner la station MTI-03 (mission mer de Beaufort)
+ - `01` pour désigner la station 1 (buccin Basse-Côte-Nord)
 
 
 ## le groupe `TRAIT/ACTIVITÉ`
@@ -131,10 +130,10 @@ Donc chaque `occurrenceId` comprends dans sa valeur même, une correspondance av
 Ceci est surtout un choix pratique, car la *vrai* correspondance (d'un point de vue base de données relationnel) est fait par la valeur de la colonne `eventId`.
 
 ## le groupe `occurrence` 
-Une simple valeur numérique suffit pour le groupe `occurrence`. Cette valeur corréspond 
+Une simple valeur numérique séquentielle suffit pour le groupe `occurrence`. 
 
 Exemple:
  - `01` la première capture saisie pour l'évenement
  - `33` la trente-troisième capture saisie pour l'évenement
   
-Le numéro utilisé pour une capture saisie recommence à 1 pour une nouvelle entré d'évènement (i.e., `eventId`).
+Le numéro utilisé pour une capture saisie recommence à 1 pour une nouvelle entrée d'évènement (i.e., `eventId`).
